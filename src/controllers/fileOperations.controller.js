@@ -1,16 +1,15 @@
-const FileOperationService = require('../services/fileOperations.service');
+const FileOperationService = require('../services').fileOperationsService();
 
 var FileOperationController = function() {
     console.log('File controller Initialised');
 }
 
-
-FileOperationController.getFullLogs = function(req, res) {
+FileOperationController.prototype.getFullLogs = function(req, res) {
     console.log('Inside FileOperationController - getFullLogs method');
     FileOperationService.getFullLogs(req, res)
 };
 
-FileOperationController.readLogByTime = function(req, res) {
+FileOperationController.prototype.readLogByTime = function(req, res) {
     console.log('Inside FileOperationController - readLogByTime method');
     FileOperationService.readLogByTime(req, res)
 };

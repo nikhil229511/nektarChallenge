@@ -7,7 +7,7 @@ var FileOperationService = function () {
     console.log("File Service Initialised");
 };
 
-FileOperationService.getFullLogs = function(req, res) {
+FileOperationService.prototype.getFullLogs = function(req, res) {
     console.log('Inside FileOperationService - getFullLogs method.: ', config.inputFilePath);
     if (!config.inputFilePath) {
         res.end('Please Provide proper file path in the config file.\n');
@@ -18,7 +18,7 @@ FileOperationService.getFullLogs = function(req, res) {
     }
 }
 
-FileOperationService.readLogByTime = function(req, res) {
+FileOperationService.prototype.readLogByTime = function(req, res) {
     console.log('Inside FileOperationService - getFullLogs method.');
     if (!config.inputFilePath) {
         res.end('Please Provide proper file path in the config file.\n');

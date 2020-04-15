@@ -1,7 +1,7 @@
 var fileOperationsController = require('./fileOperations.controller');
 
 module.exports = {
-    FileOperations: function() {
+    FileOperationsController: function() {
         return new fileOperationsController();
     }
 }

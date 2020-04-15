@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var FileController = require('../controllers/fileOperations.controller');
+var FileController = require('../controllers').FileOperationsController();
 
 console.log('File Routes initialised');
 

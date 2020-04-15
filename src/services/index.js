@@ -1,7 +1,7 @@
 const fileOperationService = require('../services/fileOperations.service');
 
 module.exports = {
-    fileOperations: function() {
+    fileOperationsService: function() {
         return new fileOperationService();
     }
 };
